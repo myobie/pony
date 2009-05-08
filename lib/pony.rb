@@ -25,6 +25,7 @@ module Pony
 	def self.build_tmail(options)
 		mail = TMail::Mail.new
 		mail.to = options[:to]
+                mail.reply_to = options[:reply_to]
 		mail.from = options[:from] || 'pony@unknown'
 		mail.subject = options[:subject]
 		mail.body = options[:body] || ""
